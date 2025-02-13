@@ -65,7 +65,8 @@ module.exports = {
       description: 'Retorna o pedido encontrado.'
     },
     notFound: {
-      description: 'Nenhum pedido com esse ID foi encontrado.'
+      description: 'Nenhum pedido com esse ID foi encontrado.',
+      responseType: 'notFound'
     }
   },
 
