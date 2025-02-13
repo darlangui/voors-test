@@ -9,10 +9,9 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.1",
     "sails": "^1.5.14",
+    "sails-disk": "^2.1.2",
     "sails-hook-orm": "^4.0.3",
     "sails-hook-sockets": "^3.0.0",
-    "sails-hook-swagger-generator": "^3.3.0",
-    "sails-mysql": "^3.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
