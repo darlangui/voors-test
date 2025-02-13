@@ -12,6 +12,8 @@
     "sails-disk": "^2.1.2",
     "sails-hook-orm": "^4.0.3",
     "sails-hook-sockets": "^3.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },

@@ -1,3 +1,40 @@
+/**
+ * @swagger
+ * /orders:
+ *   post:
+ *     summary: Create a new pizza order
+ *     description: Receives an array of pizzas, validates them, calculates the total price and time, and stores the order.
+ *     tags:
+ *       - Orders
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               pizzas:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   properties:
+ *                     size:
+ *                       type: string
+ *                       enum: [pequena, média, grande]
+ *                     flavor:
+ *                       type: string
+ *                       enum: [calabresa, marguerita, portuguesa]
+ *                     personalizations:
+ *                       type: array
+ *                       items:
+ *                         type: string
+ *                         enum: [extra bacon, sem cebola, borda recheada]
+ *     responses:
+ *       200:
+ *         description: Order created successfully
+ *       400:
+ *         description: Invalid input
+ */
 module.exports = {
   friendlyName: 'Create order',
   description: 'Cria um pedido com múltiplas pizzas e salva no banco.',

@@ -11,5 +11,6 @@
 module.exports.routes = {
   'POST /orders': 'orders/create',
   'GET /orders/:id': 'orders/find-one',
-  'GET /orders': 'orders/find-all'
+  'GET /orders': 'orders/find-all',
+  'GET /swagger.json': 'swagger/view',
 };
