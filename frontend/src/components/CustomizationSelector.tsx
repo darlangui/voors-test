@@ -16,22 +16,24 @@ const CustomizationSelector = <T extends string>({
                                                  }: CustomizationSelectorProps<T>) => {
     return (
         <div className="flex flex-col space-y-2">
-            <div className="flex space-x-3">
+            <div className="flex space-x-3 flex-wrap">
                 {values.map((option) => (
                     <label
                         key={option.value}
-                        className={`px-4 py-2 rounded-2xl border font-medium cursor-pointer
-                            ${selectedValue === option.value
-                            ? "bg-yellow-200 text-black border-0"
-                            : "bg-gray-100 text-gray-700 border-0"
-                        }`}
+                        className={`px-4 py-2 rounded-lg border font-medium cursor-pointer transition-all 
+                            ${
+                            selectedValue === option.value
+                                ? "bg-[var(--color-gray-300)] text-[var(--color-gray-900)] dark:bg-[var(--color-gray-400)] dark:text-[var(--color-gray-100)] border-0"
+                                : "bg-[var(--color-gray-200)] text-[var(--color-gray-700)] dark:bg-[var(--color-gray-600)] dark:text-[var(--color-gray-300)] border-0"
+                        }
+                            hover:bg-[var(--color-gray-300)] dark:hover:bg-[var(--color-gray-500)]`}
                     >
                         <input
                             type="radio"
                             name="pizza-option"
                             value={option.value}
                             checked={selectedValue === option.value}
-                            onChange={() => onChange(option.value)} // Certificando-se de que está no formato correto
+                            onChange={() => onChange(option.value)}
                             className="hidden"
                         />
                         {option.label}

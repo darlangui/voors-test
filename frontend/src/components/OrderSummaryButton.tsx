@@ -18,8 +18,13 @@ const OrderSummaryButton = () => {
     return (
         <button
             onClick={() => navigate("/order")}
-            className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-amber-300 text-white px-6 py-3 rounded-full shadow-lg text-lg font-semibold hover:bg-amber-400 transition-all"
+            className="disabled:opacity-50 fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-[var(--color-gray-200)] text-[var(--color-gray-800)] dark:bg-[var(--color-dark-200)] dark:text-[var(--color-gray-100)] px-6 py-3 rounded-full shadow-lg text-lg font-semibold hover:bg-[var(--color-gray-300)] dark:hover:bg-[var(--color-dark-300)] hover:cursor-pointer transition-all flex items-center gap-2"
         >
+            <span className="absolute top-0 right-0 -mt-2 -mr-2 flex size-3">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-red-600"></span>
+            </span>
+
             🛒 Ver Pedido ({pizzas.length})
         </button>
     );

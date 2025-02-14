@@ -1,2 +1,28 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-display: "Satoshi", "sans-serif";
+    --breakpoint-3xl: 1920px;
+
+    /* ⚪ Cores Neutras */
+    --color-white: #ffffff; /* Branco */
+    --color-black: #000000; /* Preto */
+    --color-gray-100: #f5f5f5; /* Cinza Claro */
+    --color-gray-200: #e0e0e0; /* Cinza Médio Claro */
+    --color-gray-300: #b0b0b0; /* Cinza Médio */
+    --color-gray-400: #808080; /* Cinza Escuro */
+    --color-gray-500: #404040; /* Cinza Muito Escuro */
+    --color-gray-600: #202020; /* Cinza Quase Preto */
+
+    /* 🌙 Modo Escuro */
+    --color-dark-100: #121212; /* Escuro Suave */
+    --color-dark-200: #1a1a1a; /* Escuro Médio */
+    --color-dark-300: #333333; /* Escuro Forte */
+    --color-dark-400: #4c4c4c; /* Escuro Muito Forte */
+
+    /* ⚡️ Animações */
+    --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+    --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+}
+
