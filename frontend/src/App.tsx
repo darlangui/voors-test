@@ -1,4 +1,4 @@
-import {Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import ChoosePizzas from './pages/ChoosePizzas';
 import { OrderProvider } from './context/OrderProvider';
 

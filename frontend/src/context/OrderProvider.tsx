@@ -9,7 +9,9 @@ interface Props {
 export const OrderProvider = ({ children }: Props) => {
     const [pizzas, setPizzas] = useState<Pizza[]>([]);
 
-    const addPizza = (pizza: Pizza) => setPizzas(prev => [...prev, pizza]);
+    const addPizza = (pizza: Pizza) => {
+        setPizzas(prev => [...prev, pizza]);
+    };
     const removePizza = (index: number) =>
         setPizzas(prev => prev.filter((_, i) => i !== index));
     const clearCart = () => setPizzas([]);
