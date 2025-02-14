@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: sails_api
+    working_dir: /app
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./backend:/app
+      - sails_data:/app/.tmp
+    environment:
+      NODE_ENV: development
+    command: ["npx", "sails", "lift"]
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: vite_frontend
+    working_dir: /app
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+
+volumes:
+  sails_data:
